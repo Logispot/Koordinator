@@ -4,21 +4,21 @@ buildscript {
     ext.config = [
             version          : "0.0.15",
 
-            targetSdkVersion : 28,
+            targetSdkVersion : 29,
             minSdkVersion    : 14,
-            compileSdkVersion: 28
+            compileSdkVersion: 29
     ]
 
     ext.versions = [
-            kotlin: "1.3.31",
-            koin  : '2.0.1'
+            kotlin: "1.3.72",
+            koin  : '2.1.5'
     ]
 
     ext.deps = [
             kotlin     : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}",
             annotations: "androidx.annotation:annotation:1.1.0",
             lifecycle  : "android.arch.lifecycle:extensions:2.1.0-rc01",
-            rxjava     : "io.reactivex.rxjava2:rxjava:2.2.9",
+            rxjava     : "io.reactivex.rxjava2:rxjava:2.2.19",
             koin       : [
                     core    : "org.koin:koin-core:${versions.koin}",
                     androidx: "org.koin:koin-android:${versions.koin}"
@@ -33,12 +33,12 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.2'
+        classpath 'com.android.tools.build:gradle:3.6.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.21.0'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.22.0'
         classpath 'org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.18'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 

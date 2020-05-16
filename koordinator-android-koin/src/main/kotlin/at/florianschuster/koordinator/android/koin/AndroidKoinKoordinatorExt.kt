@@ -48,5 +48,5 @@ inline fun <L, reified C> L.getCoordinator(
 fun LifecycleOwner.getKoin() = when (this) {
     is KoinComponent -> this.getKoin()
     is ComponentCallbacks -> (this as ComponentCallbacks).getKoin()
-    else -> GlobalContext.get().koin
+    else -> GlobalContext().get()
 }
